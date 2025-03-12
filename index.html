@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center"> vuejs chapter 1</h1>
+        <section id="interpolation" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>interpolation</h2>
+            <hr>
+            <p>tên: {{nameUser}}</p>
+            <p>Lớp: {{className}}</p>
+        </section>
+
+        <section id="bind-attribute" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>bind-attribute</h2>
+            <hr>
+            <img v-bind:src="ImgUrl" class="img-thumbnail" alt="keqing">
+            <a class="btn btn-infor mt-3 text-light" v-bind:href="linkInfor">
+                thong tin
+            </a>
+        </section>
+
+        <section id="method" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>method</h2>
+            <hr>
+            <p>Tài Xỉu : {{renderTaiXiu()}} </p>
+            <p>Số nút: {{taoSoNut()}}</p>
+            <button @click="playGame">Lắc Tài Xỉu</button>
+        </section>
+
+        <section id="raw-html" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>raw-html</h2>
+            <hr>
+            <div v-html="message">
+            </div>
+        </section>
+
+        <section id="event" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>event</h2>
+            <hr>
+            <p>biến đếm: {{count}}</p>
+            <p v-once>bien dem chi dem va tang duoc 1 lan duy nhat: {{count}}</p>
+            <button class="btn btn-info mb-2" @click="handleClick">
+                click-me
+            </button><br>
+            <button class="btn btn-warning mb-2" @click="handleIncrement(1)">
+                tăng
+            </button>
+            <form @:submit.prevent = "handleSubmit">   <!-- the submit event will no longer reload the page -->
+                <button type="submit" class="btn btn-success mt-2">
+                    submit
+                </button>
+            </form>
+            <div>
+                <h1>Login form</h1>
+                <div class="form-group">
+                    <label>Tài khoản</label>
+                    <input type="text" class="form-control" @keyup.enter="handleLogin">
+                </div>
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <!-- 'v-on:' hoac '@'' -->
+                    <input type="text" class="form-control" v-on:keyup.enter="handleLogin">
+                </div>
+            </div>
+        </section>
+
+        <section id="two-way-biding" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>two-way-biding</h2>
+            <hr>
+            <div>
+                <div class="form-group">
+                    <label>message</label>
+                    <input type="text" class="form-control" v-model="message">
+                </div>
+                <div>
+                    <p class="alert alert-danger">message: {{message}}</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="computed-and-watchers" class="bg-dark p-3 rounded text-center text-light mb-3">
+            <h2>computed-and-watchers</h2>
+            <hr>
+            <p>count : {{count}}</p>
+            <button class="btn btn-danger mb-2" @click = "handleIncrement">
+                increment count
+            </button>
+            <p class="alert alert-success">Ho ten: {{fullName}} </p>            
+            </div>
+        </section>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
