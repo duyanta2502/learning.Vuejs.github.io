@@ -57,7 +57,7 @@
             <button class="btn btn-warning mb-2" @click="handleIncrement(1)">
                 tăng
             </button>
-            <form @:submit.prevent = "handleSubmit">   <!-- the submit event will no longer reload the page -->
+            <form @:submit.prevent="handleSubmit"> <!-- the submit event will no longer reload the page -->
                 <button type="submit" class="btn btn-success mt-2">
                     submit
                 </button>
@@ -94,12 +94,12 @@
             <h2>computed-and-watchers</h2>
             <hr>
             <p>count : {{count}}</p>
-            <button class="btn btn-danger mb-2" @click = "handleIncrement">
+            <button class="btn btn-danger mb-2" @click="handleIncrement">
                 increment count
             </button>
-            <p class="alert alert-success">Ho ten: {{fullName}} </p>            
-            </div>
-        </section>
+            <p class="alert alert-success">Ho ten: {{fullName}} </p>
+    </div>
+    </section>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -113,7 +113,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
